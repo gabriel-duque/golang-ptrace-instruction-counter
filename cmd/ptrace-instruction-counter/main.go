@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
-    "os"
+	"os"
 	"os/exec"
 	"runtime"
 	"syscall"
@@ -45,10 +45,10 @@ func get_instruction_count(args []string) (count uint64) {
 func main() {
 	flag.Parse()
 
-    if len(flag.Args()) == 0 {
-        fmt.Printf("usage: %v elffile [args...]\n", os.Args[0])
-        os.Exit(1)
-    }
+	if len(flag.Args()) == 0 {
+		fmt.Printf("usage: %v elffile [args...]\n", os.Args[0])
+		os.Exit(1)
+	}
 
 	fmt.Println(get_instruction_count(flag.Args()))
 }
